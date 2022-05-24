@@ -1,44 +1,31 @@
 {
-    "name": "",
-    "version" : "0.1",
-    "description": "Learn SQL",
-    "main": "index.js",
-
-    "scripts": {
-        "start": "node server/sever.js",
-        "build": "webpack",
-        "dev": "webpack serve --open",
-    },
-    "nodemonConfig":{
-        "ignore": [
-            "build",
-            "client"
-        ]
-    },
-    "author": "Adam Rodriguez github.com/adamxrodriguez",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.12.3",
-        "prop-types": "^15.6.1",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    },
-    
-    "devDependencies": {
-        "@babel/core": "^7.18.0",
-        "@babel/preset-env": "^7.18.0",
-        "@babel/preset-react":"^7.17.12",
-        "babel-loader": "^8.2.5",
-        "concurrently":"^7.2.1",
-        "cross-env": "^7.0.3",
-        "css-loader": "^6.7.1",
-        "html-webpack-plugin": "^5.5.0",
-        "isomorphic-fetch": "^3.0.0",
-        "nodemon": "^2.0.16",
-        "webpack-cli": "^4.8.0",
-        "webpack-dev-server": "^4.9.0"
-
-
-    }
-
+  "name": "sql_learn",
+  "version": "1.0.0",
+  "description": "This SQL web App will hopefully help you have fun learning SQL.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamxrodriguez/SQL_Learn.git"
+  },
+  "keywords": [
+    "SQL"
+  ],
+  "author": "Adam Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamxrodriguez/SQL_Learn/issues"
+  },
+  "homepage": "https://github.com/adamxrodriguez/SQL_Learn#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "2.6.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

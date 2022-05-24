@@ -7,7 +7,7 @@ const path = require('path');
 
 module.exports = {
   mode: "development",
-  entry: "./client/index.js" // the root || start of your project
+  entry: "./client/index.js", // the root || start of your project
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js"
@@ -28,13 +28,13 @@ module.exports = {
         }},
         {
         test: /\.s[ac]ss$/i,
-        use: [ //'style-loader',
-        miniCssPlugin.loader,
-        'css-loader', 'sass-loader']
-        //use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+        use: //[ //'style-loader',
+        //miniCssPlugin.loader,
+        //'css-loader', 'sass-loader']
+        [ MiniCssExtractPlugin.loader,'css-loader','sass-loader' ]
             
         }], 
-  }
+  },
   
   devServer: {
     static: {
@@ -43,7 +43,7 @@ module.exports = {
     proxy: {
         '/api': 'http://localhost:3000'
     },
-    compress: true;
+    compress: true,
     port: 8000
   },
 
