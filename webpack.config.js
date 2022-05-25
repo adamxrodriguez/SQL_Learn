@@ -73,11 +73,12 @@ module.exports = {
 const miniCssPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const development = process.env.NODE_ENV !== "production";
 
-// process.env.TEST_ENV;
+
 
 module.exports = {
-  mode: "development",
+  mode:  process.env.NODE_ENV, //"development", //
   entry:'./src/index.js', // the root || start of your project
   output: {
     path: path.join(__dirname, "/dist"),
@@ -92,7 +93,7 @@ module.exports = {
     rules: [
         { 
         test: /\.jsx?/,
-        exclude: /(node_modules)/, // |bower_components
+        exclude: /node_modules/, // |bower_components
         use: {
           loader: 'babel-loader',
           options: {
@@ -116,11 +117,12 @@ module.exports = {
       directory: path.resolve(__dirname),
     },
     proxy: {
-        '/api': 'http://localhost:3000'
+      secure: false,
+        '/': 'http://localhost:3000',
     },
-    // compress: true,
+    compress: true,
     port: 8000,
-    // hot: true
+    hot: true
   },
 
 };

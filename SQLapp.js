@@ -31,7 +31,7 @@ function gitInitialState(){
 
 function checkWin(boxField){
     if (boredShibaPoints = 10){
-        return "You have a million Bored Shiba Crypto Coins, Congrats! Lambo!"
+        return "You have a million Bored Shiba Crypto Coins, Congrats! Lamob!"
     }
 }
 
@@ -40,19 +40,19 @@ class App extends Component{
     constructor(props);
     super(props);
 };
-    // this.handleClick = this.handleClick.bind(this);
-    // this.state = getInitialState();
+    this.handleClick = this.handleClick.bind(this);
+    this.state = getInitialState();
 
-// handleClick(all, SELECT, FROM, WHERE, GROUPBY, HAVING, ORDEREDBY, KEYWORDS, FILTERSANDVALUES, DISTINCT, LIMIT, ASC, DESC, "<",">","=","!=","NOT","IN","BETWEEN","AND", "OR", "(", ")",";","execute","delete")
-// {
-//     let{ points, winner } = this.state;
-//     if (this.state.winner) return;
-//     this.setState({
-//         SELECT,
-//        // "execute",
-//         winner,
-//     });
-// }
+handleClick(all, SELECT, FROM, WHERE, GROUPBY, HAVING, ORDEREDBY, KEYWORDS, FILTERSANDVALUES, DISTINCT, LIMIT, ASC, DESC, "<",">","=","!=","NOT","IN","BETWEEN","AND", "OR", "(", ")",";","execute","delete")
+{
+    let{ points, winner } = this.state;
+    if (this.state.winner) return;
+    this.setState({
+        SELECT,
+       // "execute",
+        winner,
+    });
+}
 
     render(){
     const {SELECT} = this.state;
@@ -82,4 +82,3 @@ class App extends Component{
 
 
 export default App;
-

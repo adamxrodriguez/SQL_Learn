@@ -5,9 +5,10 @@
   "description": "This SQL web App will hopefully help you have fun learning SQL.",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack serve",
-    "watch": "webpack --watch",
-    "build": "webpack",
+    "start": "NODE_ENV=production node server/server.js",
+    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack-dev-server",
+    "build": "NODE_ENV=development webpack",
+    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,3 +41,5 @@
     "webpack-cli": "^4.9.2"
   }
 }
+
+
