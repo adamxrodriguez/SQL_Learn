@@ -57,7 +57,7 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     compress: true,
-    contentBase: "./dist",
+    
     hot: true,
     port: 8080,
   },
@@ -78,9 +78,9 @@ const path = require('path');
 
 module.exports = {
   mode: "development",
-  entry: "./dist.index.js", // the root || start of your project
+  entry:'./src/index.js', // the root || start of your project
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "/dist"),
     filename: "bundle.js"
   },
 
@@ -92,13 +92,14 @@ module.exports = {
     rules: [
         { 
         test: /\.jsx?/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/, // |bower_components
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
+           presets: ['@babel/preset-env']
           }
         }},
+        
         {
         test: /\.s[ac]ss$/i,
         use: //[ //'style-loader',
@@ -110,21 +111,19 @@ module.exports = {
   },
   
   devServer: {
+    
     static: {
-      directory: path.join(__dirname, "./dist"),
+      directory: path.resolve(__dirname),
     },
     proxy: {
         '/api': 'http://localhost:3000'
     },
-    compress: true,
-    port: 8000,
-    contentBase: "./dist",
-    hot: true
+    // compress: true,
+    // port: 8000,
+    // hot: true
   },
 
 };
-
-
 
 
 
@@ -245,7 +244,6 @@ module.exports = {
 
   // required if using webpack-dev-server
   devServer: {
-    contentBase: "./dist",
     hot: true,
   },
 };

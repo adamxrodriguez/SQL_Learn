@@ -1,6 +1,5 @@
 {
   "private": true,
-  
   "name": "sql_learn",
   "version": "0.0.1",
   "description": "This SQL web App will hopefully help you have fun learning SQL.",
@@ -25,20 +24,19 @@
   },
   "homepage": "https://github.com/adamxrodriguez/SQL_Learn#readme",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "clean-webpack-plugin": "^4.0.0",
+    "babel-loader": "^8.2.5",
     "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "2.6.0",
     "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "clean-webpack-plugin": "^4.0.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "2.6.0",
-    "webpack": "^5.72.1"
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
