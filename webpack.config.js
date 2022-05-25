@@ -119,7 +119,7 @@ module.exports = {
         '/api': 'http://localhost:3000'
     },
     // compress: true,
-    // port: 8000,
+    port: 8000,
     // hot: true
   },
 
