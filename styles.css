@@ -10,9 +10,15 @@
     background-color: #FFF;
 }
 
-body {
+.box{
+padding: 8px;
+margin: 80px;
+}
+
+.body {
     font-family: 'Arial bold', 'Ubuntu Light', 'Century Gothic', sans-serif;
-    padding-top:10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .outerBox {
