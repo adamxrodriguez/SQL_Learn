@@ -79,7 +79,7 @@ const development = process.env.NODE_ENV !== "production";
 
 module.exports = {
   mode:  process.env.NODE_ENV, //"development", //
-  entry:'./src/index.js', // the root || start of your project
+  entry:'./src/index.jsx', // the root || start of your project
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js"
@@ -93,13 +93,14 @@ module.exports = {
     rules: [
         { 
         test: /\.jsx?/,
-        exclude: /node_modules/, // |bower_components
+        exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: {
-           presets: ['@babel/preset-env']
+           presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }},
+        
         
         {
         test: /\.s[ac]ss$/i,
@@ -114,7 +115,7 @@ module.exports = {
   devServer: {
     
     static: {
-      directory: path.resolve(__dirname),
+      directory: path.resolve(__dirname, './dist'),
     },
     proxy: {
       secure: false,
